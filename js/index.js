@@ -20,7 +20,7 @@ function createDivInHistory(currentDonationAmount , h2Id){
          newText = h2Text;
     }
     const historyItem = document.createElement("div");
-    historyItem.className = 'p-8 rounded-2xl border-custom border-card_border_secondary mb-6 max-w-6xl mx-auto';
+    historyItem.className = "p-4 md:p-8 rounded-2xl border-custom border-card_border_secondary mb-6 md:max-w-6xl";
     historyItem.innerHTML = `
     <p class="text-2xl text-primary">${currentDonationAmount} Taka is Donated for ${newText}</p>
     <p class="text-base text-secondary mt-4">${new Date().toString()}</p>

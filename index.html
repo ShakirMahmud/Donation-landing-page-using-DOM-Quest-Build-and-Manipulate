@@ -47,17 +47,17 @@
       <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
         <button
           id="btn-blog"
-          class="bg-btn_bg text-primary text-xl px-8 py-3 rounded-lg"
+          class="bg-btn_bg text-primary text-xl px-2 md:px-8 py-3 rounded-lg"
         >
           Blog
         </button>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 md:gap-4">
           <img src="./assets/logo.png" alt="" />
-          <h3 class="text-primary text-xl font-[600]">Donate Bangladesh</h3>
+          <h3 class="text-primary md:text-xl font-[600] ">Donate <br class="md:hidden"> Bangladesh</h3>
         </div>
         <div class="flex items-center gap-3">
           <img src="./assets/coin.png" alt="" />
-          <h4 class="text-secondary text-xl">
+          <h4 class="text-secondary md:text-xl">
             <span id="current-balance">55000</span> BDT
           </h4>
         </div>
@@ -81,13 +81,13 @@
       </div>
     </header>
     <main>
-      <section class="pb-36 bg-[#F9F7F3]">
-        <section id="donation-section" class="px-36 py-20 bg-white">
+      <section class="pb-16 md:pb-36 bg-[#F9F7F3]">
+        <section id="donation-section" class="px-4 py-2 md:px-36 md:py-20 bg-white">
           <!-- card div  -->
           <div class="mt-8 grid grid-cols-1 gap-8">
             <!-- card 1  -->
             <div
-              class="p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-2 gap-8"
+              class="p-4 md:p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-4  md:gap-8"
             >
               <img class="w-full h-full" src="./assets/noakhali.png" alt="" />
               <div class="flex flex-col items-start justify-between">
@@ -129,7 +129,7 @@
             </div>
             <!-- card 2  -->
             <div
-              class="p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-2 gap-8"
+              class="p-4 md:p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-4  md:gap-8"
             >
               <img class="w-full h-full" src="./assets/feni.png" alt="" />
               <div class="flex flex-col items-start justify-between">
@@ -170,7 +170,7 @@
             </div>
             <!-- card 3  -->
             <div
-              class="p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-2 gap-8"
+              class="p-4 md:p-8 border-custom border-card_border_secondary rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-4  md:gap-8"
             >
               <img
                 class="w-full h-full"
@@ -217,7 +217,7 @@
           </div>
         </section>
         <!-- history section  -->
-        <section id="history-section" class="hidden px-36 py-20 bg-white">
+        <section id="history-section" class="hidden px-4 py-4 md:px-36 md:py-20 bg-white">
           <div id="history-div"></div>
         </section>
 
