@@ -69,25 +69,46 @@ function showModal(){
     modal.showModal();
 }
 
+function validateInput(id) {
+    const inputElement = document.getElementById(id);
+    const inputValue = parseFloat(inputElement.value);
+    const currentBalanceElement = parseFloat(document.getElementById('current-balance').innerText);
+
+    if (inputValue > currentBalanceElement || isNaN(inputValue) || inputValue <= 0 || inputElement.value.trim() === '') {
+        alert('Invalid Data');
+        return false;
+    }
+    return true;
+}
+
+
 const donateNoakhaliButton =  document.getElementById('btn-donate-noakhali');
 donateNoakhaliButton.addEventListener("click", function () {
-    const donateNoakhaliAmount =  getInputValueById('input-noakhali');
-    updateCurrentBalance(donateNoakhaliAmount , 'current-donation-noakhali', "h2-noakhali");
-    showModal();
+    if (validateInput('input-noakhali')) {
+        const donateNoakhaliAmount = getInputValueById('input-noakhali');
+        updateCurrentBalance(donateNoakhaliAmount, 'current-donation-noakhali', "h2-noakhali");
+        showModal();
+    }
 });
 
 const donateFeniButton = document.getElementById('btn-donate-feni');
 donateFeniButton.addEventListener("click", function () {
-    const donateFeniAmount = getInputValueById('input-feni');
-    updateCurrentBalance(donateFeniAmount , 'current-donation-feni', "h2-feni");
-    showModal();
+    
+    if (validateInput('input-feni')) {
+        const donateFeniAmount = getInputValueById('input-feni');
+        updateCurrentBalance(donateFeniAmount, 'current-donation-feni', 'h2-feni');
+        showModal();
+    }
 });
 
 const donateQuotaButton = document.getElementById('btn-donate-quota');
 donateQuotaButton.addEventListener("click", function () {
-    const donateQuotaAmount = getInputValueById('input-quota');
-    updateCurrentBalance(donateQuotaAmount , 'current-donation-quota', 'h2-quota');
-    showModal();
+    
+    if (validateInput('input-quota')) {
+        const donateQuotaAmount = getInputValueById('input-quota');
+        updateCurrentBalance(donateQuotaAmount, 'current-donation-quota', 'h2-quota');
+        showModal();
+    }
 });
 
 const btnHistory =  document.getElementById('btn-history');
