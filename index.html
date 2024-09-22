@@ -43,7 +43,7 @@
     </style>
   </head>
   <body class="lexend">
-    <header id="sticky-header" class="sticky top-0 z-10 bg-white ">
+    <header id="sticky-header" class="sticky top-0 z-10 bg-white">
       <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
         <button
           id="btn-blog"
@@ -57,19 +57,23 @@
         </div>
         <div class="flex items-center gap-3">
           <img src="./assets/coin.png" alt="" />
-          <h4 class="text-secondary text-xl"><span id="current-balance">5500</span> BDT</h4>
+          <h4 class="text-secondary text-xl">
+            <span id="current-balance">55000</span> BDT
+          </h4>
         </div>
       </nav>
       <!-- button div  -->
-      <div class="flex gap-4 justify-center mt-5  pb-5">
+      <div class="flex gap-4 justify-center mt-5 pb-5">
         <!-- donation button -->
-        <button id="btn-donation"
+        <button
+          id="btn-donation"
           class="px-8 py-4 rounded-lg font-[600] text-xl bg-btn_bg text-primary"
         >
           Donation
         </button>
         <!-- history button  -->
-        <button id="btn-history"
+        <button
+          id="btn-history"
           class="px-8 py-4 rounded-lg font-[600] text-xl text-secondary border-custom border-btn_border_secondary"
         >
           History
@@ -91,9 +95,14 @@
                   class="bg-bdt_bg rounded-lg px-4 py-2 w-auto flex gap-2 mb-4"
                 >
                   <img src="./assets/coin.png" alt="" />
-                  <h4 class="text-xl text-secondary"><span id="current-donation-noakhali">0</span> BDT</h4>
+                  <h4 class="text-xl text-secondary">
+                    <span id="current-donation-noakhali">0</span> BDT
+                  </h4>
                 </div>
-                <h2 class="text-xl text-primary font-[700] mb-4">
+                <h2
+                  id="h2-noakhali"
+                  class="text-xl text-primary font-[700] mb-4"
+                >
                   Donate for Flood at Noakhali, Bangladesh
                 </h2>
                 <p class="text-base text-secondary font-[300] mb-6">
@@ -110,7 +119,8 @@
                   placeholder="Write Donation Amount"
                   type="text"
                 />
-                <button id="btn-donate-noakhali"
+                <button
+                  id="btn-donate-noakhali"
                   class="px-8 py-4 rounded-lg font-[600] bg-btn_bg text-xl text-primary mt-8 w-full"
                 >
                   Donate Now
@@ -127,9 +137,11 @@
                   class="bg-bdt_bg rounded-lg px-4 py-2 w-auto flex gap-2 mb-4"
                 >
                   <img src="./assets/coin.png" alt="" />
-                  <h4 class="text-xl text-secondary"><span id="current-donation-feni">0</span> BDT</h4>
+                  <h4 class="text-xl text-secondary">
+                    <span id="current-donation-feni">0</span> BDT
+                  </h4>
                 </div>
-                <h2 class="text-xl text-primary font-[700] mb-4">
+                <h2 id="h2-feni" class="text-xl text-primary font-[700] mb-4">
                   Donate for Flood Relief in Feni,Bangladesh
                 </h2>
                 <p class="text-base text-secondary font-[300] mb-6">
@@ -148,7 +160,8 @@
                   placeholder="Write Donation Amount"
                   type="text"
                 />
-                <button id="btn-donate-feni"
+                <button
+                  id="btn-donate-feni"
                   class="px-8 py-4 rounded-lg font-[600] bg-btn_bg text-xl text-primary mt-8 w-full"
                 >
                   Donate Now
@@ -169,9 +182,11 @@
                   class="bg-bdt_bg rounded-lg px-4 py-2 w-auto flex gap-2 mb-4"
                 >
                   <img src="./assets/coin.png" alt="" />
-                  <h4 class="text-xl text-secondary"><span id="current-donation-quota">0</span> BDT</h4>
+                  <h4 class="text-xl text-secondary">
+                    <span id="current-donation-quota">0</span> BDT
+                  </h4>
                 </div>
-                <h2 class="text-xl text-primary font-[700] mb-4">
+                <h2 id="h2-quota" class="text-xl text-primary font-[700] mb-4">
                   Aid for Injured in the Quota Movement
                 </h2>
                 <p class="text-base text-secondary font-[300] mb-6">
@@ -191,7 +206,8 @@
                   placeholder="Write Donation Amount"
                   type="text"
                 />
-                <button id="btn-donate-quota"
+                <button
+                  id="btn-donate-quota"
                   class="px-8 py-4 rounded-lg font-[600] bg-btn_bg text-xl text-primary mt-8 w-full"
                 >
                   Donate Now
@@ -199,11 +215,28 @@
               </div>
             </div>
           </div>
-          <!-- history div  -->
-           <div id="history-div" class="hidden">
-
-           </div>
         </section>
+        <!-- history section  -->
+        <section id="history-section" class="hidden px-36 py-20 bg-white">
+          <div id="history-div"></div>
+        </section>
+
+        <!-- modal  -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box bg-white flex flex-col items-center justify-center">
+            <h1 class="text-4xl text-primary font-[800] mb-4">Congrates!</h1>
+            <img src="./assets/coin.png" alt="">
+            <p class="text-xl text-secondary font-[400] mt-4">You Have Donated for HumanKind</p>
+            <h3 class="text-3xl text-primary font-[700] mt-4">Successfully</h3>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn px-4 py-3 bg-bdt_bg font-[600] mt-4">close confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
     </main>
 
