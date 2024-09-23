@@ -47,15 +47,25 @@
   </head>
   <body class="lexend">
     <header id="sticky-header" class="sticky top-0 z-10 bg-white">
-      <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
-        <button
-          id="btn-index"
-          class="bg-btn_bg text-primary text-xl px-2 md:px-8 py-3 rounded-lg"
-        >
-          Home
-        </button>
-      </nav>
-    </header>
+        <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
+          <button
+            id="btn-index"
+            class="bg-btn_bg text-primary text-xl px-2 md:px-8 py-3 rounded-lg"
+          >
+            Home
+          </button>
+          <div class="flex items-center gap-2 md:gap-4">
+            <img src="./assets/logo.png" alt="" />
+            <h3 class="text-primary md:text-xl font-[600] ">Donate <br class="md:hidden"> Bangladesh</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="./assets/coin.png" alt="" />
+            <h4 class="text-secondary md:text-xl">
+              <span id="current-balance">55000</span> BDT
+            </h4>
+          </div>
+        </nav>
+      </header>
     <main>
       <section class="pb-16 md:pb-36 bg-[#F9F7F3]">
         <section class="bg-white px-4 py-2 md:px-28 md:py-20">
