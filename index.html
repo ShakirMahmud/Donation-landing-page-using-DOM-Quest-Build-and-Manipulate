@@ -40,6 +40,15 @@
       .lexend {
         font-family: "Lexend", sans-serif;
       }
+      .no-spinner::-webkit-inner-spin-button,
+        .no-spinner::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .no-spinner {
+            -moz-appearance: textfield; /* Remove arrows in Firefox */
+        }
     </style>
   </head>
   <body class="lexend">
@@ -115,9 +124,9 @@
                 </p>
                 <input
                   id="input-noakhali"
-                  class="border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
+                  class="no-spinner border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
                   placeholder="Write Donation Amount"
-                  type="text"
+                  type="number"
                 />
                 <button
                   id="btn-donate-noakhali"
@@ -156,9 +165,9 @@
                 </p>
                 <input
                   id="input-feni"
-                  class="border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
+                  class="no-spinner border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
                   placeholder="Write Donation Amount"
-                  type="text"
+                  type="number"
                 />
                 <button
                   id="btn-donate-feni"
@@ -202,9 +211,9 @@
                 </p>
                 <input
                   id="input-quota"
-                  class="border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
+                  class="no-spinner border-custom border-card_border_secondary p-5 rounded-lg w-full placeholder-placeholder_text_color mb-4"
                   placeholder="Write Donation Amount"
-                  type="text"
+                  type="number"
                 />
                 <button
                   id="btn-donate-quota"

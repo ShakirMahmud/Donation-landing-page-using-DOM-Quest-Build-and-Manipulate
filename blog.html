@@ -59,7 +59,8 @@
     <main>
       <section class="pb-16 md:pb-36 bg-[#F9F7F3]">
         <section class="bg-white px-4 py-2 md:px-28 md:py-20">
-            <div class="collapse collapse-arrow bg-base-200">
+            <h1 class="text-primary md:text-4xl text-center mb-4">Important FAQ</h1>
+            <div class="collapse collapse-arrow bg-base-200 mb-4">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title md:text-2xl text-primary font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
@@ -68,25 +69,26 @@
                  </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow bg-base-200">
+              <div class="collapse collapse-arrow bg-base-200 mb-4">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title md:text-2xl font-medium text-primary">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>We can select an Element from the DOM in several ways. <br><br>
-                    <span class="text-primary md:text-xl ">1. Selecting By ID:</span> <br>
-                    To select an element by its id, we use the document.getElementById() method. For example, document.getElementById("myId"). <br><br>
-                    <span class="text-primary md:text-xl">2. Selecting By Class:</span> <br>
-                    To select elements by their class name, we use the document.getElementsByClassName() method. For example, document.getElementsByClassName("myClass"). <br><br>
-                    <span class="text-primary md:text-xl">3. Selecting By Tag Name:</span> <br>
-                    To select elements by their tag name, we use the document.getElementsByTagName() method. For example, document.getElementsByTagName("p"). <br><br>
-                    <span class="text-primary md:text-xl">4. Selecting By CSS Selector:</span> <br>
-                    To select elements by their CSS selector, we use the document.querySelector() method. For example, document.querySelector("#myId"). <br><br>
-                    <span class="text-primary md:text-xl">5. Selecting By Multiple Elements:</span> <br>
-                    To select multiple elements by their tag name, we use the document.querySelectorAll() method. For example, document.querySelectorAll("p"). <br>
+                  <p>We can select an Element from the DOM in several ways. <br>
+                    1. Select by ID: <br>
+                    To select an element by its id, we use the document.getElementById() method.Example, document.getElementById("myId"). <br>
+                    2. Select by Class: <br>
+                    To select elements by their class name, we use document.getElementsByClassName(). Example: document.getElementsByClassName <br class="md:hidden">("myClass"). <br>
+                    
+                    3. Select by Tag: <br>
+                    To select elements by their tag name, we use document.getElementsByTagName(). Example: document.getElementsByTagName("p"). <br>
+                    4. Select by CSS Selector: <br>
+                    To select elements by their CSS selector, we use document.querySelector(). Example: document.querySelector("#myId"). <br>
+                    5. Select by Multiple Elements: <br>
+                    To select multiple elements by their tag name, we use document.querySelectorAll(). Example: document.querySelectorAll("p"). <br>
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow bg-base-200">
+              <div class="collapse collapse-arrow bg-base-200 mb-4">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title md:text-2xl font-medium text-primary">What is event delegation in the context of the DOM, and why is it useful?</div>
                 <div class="collapse-content">
@@ -99,32 +101,20 @@
               </div>
               <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title md:text-xl font-medium text-primary">How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content ">
-                    <p class="break-words whitespace-normal ">
-                        To manipulate an element's attributes and styles using the DOM, we can use the following methods: <br><br>
-                        <span class="text-primary md:text-xl">1. Changing Attributes:</span> <br>
-                        To change an element's attribute, we can use the setAttribute() method. For example, element.setAttribute("attributeName", "newAttributeValue"). <br><br>
-                        <span class="text-primary md:text-xl">2. Removing Attributes:</span> <br>
-                        To remove an element's attribute, we can use the removeAttribute() method. For example, element.removeAttribute("attributeName"). <br><br>
-                        <span class="text-primary md:text-xl">3. Changing Styles:</span> <br>
-                        To change an element's style, we can use the style property. For example, element.style.property = "newValue". <br><br>
-                        <span class="text-primary md:text-xl">4. Accessing Styles:</span> <br>
-                        To access an element's style, we can use the getStyle() method. For example, var style = getComputedStyle(element).getPropertyValue("property"). <br><br>
-                        <span class="text-primary md:text-xl">5. Creating and Appending Elements:</span> <br>
-                        To create a new element, we can use the document.createElement() method. For example, var newElement = document.createElement("div"). <br><br>
-    
-                        To append an element to another element, we can use the appendChild() method. For example, parentElement.appendChild(newElement). <br><br>
-                        <span class="text-primary md:text-xl">6. Removing Elements:</span> <br>
-                        To remove an element from the DOM, we can use the removeChild() method. For example, parentElement.removeChild(childElement). <br><br>
-                        <span class="text-primary md:text-xl">7. Updating Text and InnerHTML:</span> <br>
-                        To update the text content of an element, we can use the textContent property. For example, element.textContent = "newTextContent". <br><br>
-                        <span class="text-primary md:text-xl">8. Event Handling:</span> <br>
-                        To handle events on an element, we can use event listeners. For example, element.addEventListener("click", function(event) { console.log("Clicked!"); }). <br>
-    
-                      </p>
+                <div class="collapse-title md:text-2xl font-medium text-primary">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                    <p class="break-words whitespace-normal overflow-visible ">
+                        1. Change Attributes: <br>
+                        You can change an element’s attribute with `setAttribute()`. Example: `element.setAttribute("src", "newImage.jpg")`. 
+                        <br>
+                        2. Remove Attributes: <br>
+                        To remove an attribute, use `removeAttribute()`. Example: `element.removeAttribute("disabled")`. <br><br>
+                        3. Change Styles: <br>
+                        You can change an element's style with `style.property`. Example: `element.style.backgroundColor = "red"`. <br>
+                    </p>
                 </div>
-              </div>
+            </div>
+            
         </section>
       </section>
     </main>

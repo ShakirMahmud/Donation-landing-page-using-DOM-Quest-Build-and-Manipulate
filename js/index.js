@@ -88,7 +88,7 @@ function validateInput(id) {
     const currentBalanceElement = parseFloat(document.getElementById('current-balance').innerText);
 
     if (inputValue > currentBalanceElement || isNaN(inputValue) || inputValue <= 0 || inputElement.value.trim() === '') {
-        alert('Invalid Data');
+        alert('Invalid Donation amount');
         return false;
     }
     return true;
