@@ -1,3 +1,16 @@
+const blogBtn = document.getElementById('btn-blog');
+if (blogBtn) {
+    blogBtn.addEventListener('click', function() {
+        window.location.href = 'blog.html';
+    });
+}
+
+const homeBtn = document.getElementById('btn-index');
+if (homeBtn) {
+    homeBtn.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
 window.addEventListener("scroll", function () {
   const header = document.getElementById("sticky-header");
   if (window.scrollY > 0) {
@@ -11,7 +24,7 @@ function getInputValueById(id) {
   return parseFloat(document.getElementById(id).value);
 }
 
-function createDivInHistory(currentDonationAmount , h2Id){
+function createDivInHistory(amount , h2Id){
     const h2Text = document.getElementById(h2Id).innerText;
     let newText;
     if(h2Text.includes('Donate for ')){
@@ -20,9 +33,9 @@ function createDivInHistory(currentDonationAmount , h2Id){
          newText = h2Text;
     }
     const historyItem = document.createElement("div");
-    historyItem.className = "p-4 md:p-8 rounded-2xl border-custom border-card_border_secondary mb-6 md:max-w-6xl";
+    historyItem.className = "p-4 md:p-8 rounded-2xl border-custom border-card_border_secondary mb-6 md:max-w-6xl mx-auto";
     historyItem.innerHTML = `
-    <p class="text-2xl text-primary">${currentDonationAmount} Taka is Donated for ${newText}</p>
+    <p class="text-2xl text-primary">${amount} Taka is Donated for ${newText}</p>
     <p class="text-base text-secondary mt-4">${new Date().toString()}</p>
     `;
     const historyContainer = document.getElementById("history-div");
@@ -38,7 +51,7 @@ function updateCurrentBalance(amount , currentDonationId , h2Id){
     const currentDonation = parseFloat(document.getElementById(currentDonationId).innerText);
     const currentDonationAmount = (currentDonation + amount).toFixed(2);
     document.getElementById(currentDonationId).innerText = currentDonationAmount;
-    createDivInHistory(currentDonationAmount , h2Id);
+    createDivInHistory(amount , h2Id);
 }
 
 function updateButtons(clickedButton, otherButton){

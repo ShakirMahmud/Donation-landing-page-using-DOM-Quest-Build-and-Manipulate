@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Quest Build and Manipulate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#111111",
+              secondary: "rgba(17, 17, 17, 0.7)",
+              btn_bg: "#B4F461",
+              btn_border_secondary: " rgba(17, 17, 17, 0.3)",
+              card_border_secondary: " rgba(17, 17, 17, 0.1)",
+              bdt_bg: " rgba(17, 17, 17, 0.05)",
+              placeholder_text_color: "rgba(17, 17, 17, 0.4)",
+            },
+            borderWidth: {
+              custom: "0.06rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+      span{
+        padding-bottom: 5rem;
+      }
+    </style>
+  </head>
+  <body class="lexend">
+    <header id="sticky-header" class="sticky top-0 z-10 bg-white">
+      <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
+        <button
+          id="btn-index"
+          class="bg-btn_bg text-primary text-xl px-2 md:px-8 py-3 rounded-lg"
+        >
+          Home
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="pb-16 md:pb-36 bg-[#F9F7F3]">
+        <section class="bg-white px-4 py-2 md:px-28 md:py-20">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title md:text-2xl text-primary font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The document Object Model is a programming language that allows interaction with the webpage's elements. The DOM can be visualized as a upside down tree model where The tree's root is Document. It represent Entire HTML document. Every other elements in the HTML is a node and they are parts of the Document. <br>
+                  A Website use each Nodes or the elements like &lt;h1&gt; &lt;p&gt;as a object datatype.
+                 </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title md:text-2xl font-medium text-primary">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>We can select an Element from the DOM in several ways. <br><br>
+                    <span class="text-primary md:text-xl ">1. Selecting By ID:</span> <br>
+                    To select an element by its id, we use the document.getElementById() method. For example, document.getElementById("myId"). <br><br>
+                    <span class="text-primary md:text-xl">2. Selecting By Class:</span> <br>
+                    To select elements by their class name, we use the document.getElementsByClassName() method. For example, document.getElementsByClassName("myClass"). <br><br>
+                    <span class="text-primary md:text-xl">3. Selecting By Tag Name:</span> <br>
+                    To select elements by their tag name, we use the document.getElementsByTagName() method. For example, document.getElementsByTagName("p"). <br><br>
+                    <span class="text-primary md:text-xl">4. Selecting By CSS Selector:</span> <br>
+                    To select elements by their CSS selector, we use the document.querySelector() method. For example, document.querySelector("#myId"). <br><br>
+                    <span class="text-primary md:text-xl">5. Selecting By Multiple Elements:</span> <br>
+                    To select multiple elements by their tag name, we use the document.querySelectorAll() method. For example, document.querySelectorAll("p"). <br>
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title md:text-2xl font-medium text-primary">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>
+                    Event delegation is a technique used in the Document Object Model (DOM) to handle events efficiently. It allows users to attach a single event listener to a parent element instead of attaching a listener to each individual child element. This reduces the number of event listeners and improves performance. <br><br>
+                    The main advantage of event delegation is that it improves code reusability and reduces memory usage. When an event occurs on the parent element, the event handler function is triggered, and the event object contains information about the specific element that triggered the event. <br><br>
+                    Event delegation is especially useful when dealing with dynamic content, such as adding or removing elements dynamically. By attaching a single event listener to the parent element, user can handle all the events triggered by the child elements, reducing the number of event listeners and improving efficiency.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title md:text-xl font-medium text-primary">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content ">
+                    <p class="break-words whitespace-normal ">
+                        To manipulate an element's attributes and styles using the DOM, we can use the following methods: <br><br>
+                        <span class="text-primary md:text-xl">1. Changing Attributes:</span> <br>
+                        To change an element's attribute, we can use the setAttribute() method. For example, element.setAttribute("attributeName", "newAttributeValue"). <br><br>
+                        <span class="text-primary md:text-xl">2. Removing Attributes:</span> <br>
+                        To remove an element's attribute, we can use the removeAttribute() method. For example, element.removeAttribute("attributeName"). <br><br>
+                        <span class="text-primary md:text-xl">3. Changing Styles:</span> <br>
+                        To change an element's style, we can use the style property. For example, element.style.property = "newValue". <br><br>
+                        <span class="text-primary md:text-xl">4. Accessing Styles:</span> <br>
+                        To access an element's style, we can use the getStyle() method. For example, var style = getComputedStyle(element).getPropertyValue("property"). <br><br>
+                        <span class="text-primary md:text-xl">5. Creating and Appending Elements:</span> <br>
+                        To create a new element, we can use the document.createElement() method. For example, var newElement = document.createElement("div"). <br><br>
+    
+                        To append an element to another element, we can use the appendChild() method. For example, parentElement.appendChild(newElement). <br><br>
+                        <span class="text-primary md:text-xl">6. Removing Elements:</span> <br>
+                        To remove an element from the DOM, we can use the removeChild() method. For example, parentElement.removeChild(childElement). <br><br>
+                        <span class="text-primary md:text-xl">7. Updating Text and InnerHTML:</span> <br>
+                        To update the text content of an element, we can use the textContent property. For example, element.textContent = "newTextContent". <br><br>
+                        <span class="text-primary md:text-xl">8. Event Handling:</span> <br>
+                        To handle events on an element, we can use event listeners. For example, element.addEventListener("click", function(event) { console.log("Clicked!"); }). <br>
+    
+                      </p>
+                </div>
+              </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
