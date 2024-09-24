@@ -13,10 +13,13 @@ if (homeBtn) {
 }
 window.addEventListener("scroll", function () {
   const header = document.getElementById("sticky-header");
+  const navBar = document.getElementById("nav-bar");
   if (window.scrollY > 0) {
-    header.classList.add("shadow-lg");
+    header.classList.add("shadow-lg", "backdrop-blur-md", "bg-opacity-20");
+    navBar.classList.remove( "bg-[#F9F7F3]");
   } else {
-    header.classList.remove("shadow-lg");
+    header.classList.remove("shadow-lg", "backdrop-blur-md", "bg-opacity-20");
+    navBar.classList.add( "bg-[#F9F7F3]");
   }
 });
 

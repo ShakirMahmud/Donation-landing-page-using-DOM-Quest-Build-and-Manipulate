@@ -47,7 +47,7 @@
   </head>
   <body class="lexend">
     <header id="sticky-header" class="sticky top-0 z-10 bg-white">
-        <nav class="bg-[#F9F7F3] flex justify-around items-center py-6">
+        <nav id="nav-bar" class="bg-[#F9F7F3] flex justify-around items-center py-6">
           <button
             id="btn-index"
             class="bg-btn_bg text-primary text-xl px-2 md:px-8 py-3 rounded-lg"
@@ -61,7 +61,7 @@
           <div class="flex md:flex-row flex-col items-center text-center gap-3">
             <img src="./assets/coin.png" alt="" />
             <h4 class="text-secondary md:text-xl">
-              <span id="current-balance">55000</span> BDT
+              <span id="current-balance">55000</span> <br class="md:hidden">BDT
             </h4>
           </div>
         </nav>
@@ -109,22 +109,22 @@
                   </p>
                 </div>
               </div>
-              <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title md:text-2xl font-medium text-primary">How do you manipulate an element's attributes and styles using the DOM?</div>
+              <div class="collapse collapse-arrow bg-base-200 mb-4">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title md:text-2xl font-medium text-primary">What is event delegation in the context of the DOM, and why is it useful?</div>
                 <div class="collapse-content">
-                    <p class="break-words whitespace-normal overflow-visible ">
-                        1. Change Attributes: <br>
-                        You can change an element’s attribute with `setAttribute()`. Example: `element.setAttribute("src", "newImage.jpg")`. 
-                        <br>
-                        2. Remove Attributes: <br>
-                        To remove an attribute, use `removeAttribute()`. Example: `element.removeAttribute("disabled")`. <br><br>
-                        3. Change Styles: <br>
-                        You can change an element's style with `style.property`. Example: `element.style.backgroundColor = "red"`. <br>
-                    </p>
+                  <p class="break-words whitespace-normal overflow-visible ">
+                    1. Change Attributes: <br>
+                    You can change an element’s attribute with `setAttribute()`. Example: `element.setAttribute("src", "newImage.jpg")`. 
+                    <br>
+                    2. Remove Attributes: <br>
+                    To remove an attribute, use `removeAttribute()`. Example: `element.removeAttribute("disabled")`. <br>
+                    3. Change Styles: <br>
+                    You can change an element's style with `style.property`. Example: `element.style.backgroundColor = "red"`. <br>
+                </p>
                 </div>
-            </div>
-            
+              </div>
+
         </section>
       </section>
     </main>
